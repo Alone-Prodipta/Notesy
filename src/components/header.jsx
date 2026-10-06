@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
+import AuthButtons from "./authButtons.jsx";
 function Header() {
     return (
         <>
@@ -12,10 +13,11 @@ function Header() {
                     <Container>
                         <Navbar.Brand href="component/homepage" className="text-black">Notesy</Navbar.Brand>
                     </Container>
-                    <Col xs="auto">
+                    <Col xs="auto" className="d-flex align-items-center gap-2">
                         <Button className="bg-custom">
                             <Link className="text-white" to="/Foreground">Get Started</Link>
                         </Button>
+                        <AuthButtons />
                     </Col>
                 </Navbar>
             </Container>
